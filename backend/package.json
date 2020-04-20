@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "queue": "nodemon src/queue.js",
-    "dev:debug": "nodemon --inspect src/server.js"
+    "dev:debug": "nodemon --inspect src/server.js",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "@sentry/node": "^5.15.0",
@@ -27,6 +29,7 @@
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.5",
     "youch": "^2.0.10",
+    "sucrase": "^3.12.1",
     "yup": "^0.28.3"
   },
   "devDependencies": {
@@ -39,7 +42,6 @@
     "eslint-plugin-prettier": "^3.1.2",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
-    "sequelize-cli": "^5.5.1",
-    "sucrase": "^3.12.1"
+    "sequelize-cli": "^5.5.1"
   }
 }
