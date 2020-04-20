@@ -19,6 +19,8 @@ import ProblemController from './app/controllers/ProblemController';
 const upload = multer(multerConfig);
 const routes = new Router();
 
+routes.get('/', (req, res) => res.send('ok'));
+
 routes.post('/sessions', SessionController.store);
 
 // Delivery
